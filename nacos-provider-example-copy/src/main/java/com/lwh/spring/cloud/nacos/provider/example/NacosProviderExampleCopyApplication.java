@@ -21,11 +21,11 @@ public class NacosProviderExampleCopyApplication {
   }
 
   /**
-   * http://localhost:8020/echo/port
+   * http://localhost:8020/provider/echo/port
    */
   @RestController
   class EchoController {
-    @RequestMapping(value = "/echo/port", method = RequestMethod.GET)
+    @RequestMapping(value = "/provider/echo/port", method = RequestMethod.GET)
     public String echo() {
       String port = applicationContext.getEnvironment().getProperty("local.server.port");
       return "Hello Nacos Discovery " + port;

@@ -17,9 +17,9 @@ public class ControllerFeign {
 	ProviderService providerService;
 
 	/**
-	 * http://localhost:8040/feign/invoke/port
+	 * http://localhost:8040/consumer/feign/invoke/port
 	 */
-	@RequestMapping(value = "/feign/invoke/port", method = RequestMethod.GET)
+	@RequestMapping(value = "/consumer/feign/invoke/port", method = RequestMethod.GET)
 	public String echo(){
 		log.info("进入了feign调用。。。");
 		String echo = providerService.echo();

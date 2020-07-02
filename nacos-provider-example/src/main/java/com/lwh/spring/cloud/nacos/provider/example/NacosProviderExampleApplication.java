@@ -24,11 +24,11 @@ public class NacosProviderExampleApplication {
   }
 
   /**
-   * http://localhost:8020/echo/xiaoming
+   * http://localhost:8020/provider/echo/xiaoming
    */
   @RestController
   class EchoController {
-    @RequestMapping(value = "/echo/port", method = RequestMethod.GET)
+    @RequestMapping(value = "/provider/echo/port", method = RequestMethod.GET)
     public String echo() throws InterruptedException {
       String port = applicationContext.getEnvironment().getProperty("local.server.port");
       TimeUnit.SECONDS.sleep(6);

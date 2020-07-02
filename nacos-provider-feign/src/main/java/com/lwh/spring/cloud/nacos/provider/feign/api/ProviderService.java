@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value = "service-provider", fallback = ProviderServiceFallback.class)
 public interface ProviderService {
 
-	@RequestMapping(value = "/echo/port", method = RequestMethod.GET)
+	@RequestMapping(value = "/provider/echo/port", method = RequestMethod.GET)
 	String echo();
 
 }
